@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הזמנה אישית</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+font-family:"Segoe UI",Arial,sans-serif;background:#f3f1ed;color:#222;padding:20px
+}
+.invitation{
+width:100%;max-width:650px;background:#fff;padding:55px 50px;text-align:center;
+border:1px solid #d8d2c8;box-shadow:0 20px 60px rgba(0,0,0,.12)
+}
+.line{width:70px;height:2px;background:#b08d57;margin:0 auto 25px}
+.small{font-size:13px;letter-spacing:4px;color:#8b7355;margin-bottom:14px}
+h1{font-family:Georgia,serif;font-size:40px;font-weight:400;margin:0}
+.sub{margin-top:12px;color:#777}
+.date{margin:35px 0;padding:25px;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.date-label{font-size:12px;letter-spacing:2px;color:#999;margin-bottom:8px}
+.date-number{font-family:Georgia,serif;font-size:30px}
+.events{display:flex;gap:22px;margin:30px 0}
+.event{flex:1;padding:22px 12px;border:1px solid #e0ddd8}
+.icon{font-size:30px;margin-bottom:10px}
+.event h3{margin:5px 0;font-size:18px;font-weight:500}
+.event p{margin:5px 0;color:#777;font-size:14px}
+button{
+margin-top:10px;padding:15px 48px;border:0;background:#222;color:#fff;
+font-size:16px;cursor:pointer;transition:.3s
+}
+button:hover{background:#b08d57}
+#message{margin-top:20px;color:#8b7355;min-height:24px}
+.footer{margin-top:35px;font-size:12px;color:#aaa}
+@media(max-width:600px){
+.invitation{padding:40px 25px}.events{flex-direction:column}
+h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<div class="invitation">
+<div class="line"></div>
+<div class="small">OFFICIAL INVITATION</div>
+<h1>הזמנה לדייט ❤️</h1>
+<div class="sub">הזמנה אישית לערב מיוחד</div>
+
+<div class="date">
+<div class="date-label">DATE</div>
+<div class="date-number">26.08.2026</div>
+</div>
+
+<div class="events">
+<div class="event">
+<div class="icon">🎱</div>
+<h3>סנוקר</h3>
+<p>משחק זוגי באווירה טובה</p>
+</div>
+<div class="event">
+<div class="icon">🏋️</div>
+<h3>אימון</h3>
+<p>אימון משותף וזמן איכות</p>
+</div>
+</div>
+
+<button onclick="confirmDate()">אישור הגעה</button>
+<div id="message"></div>
+<div class="footer">ההזמנה אישית ומיועדת לאורחת אחת בלבד ❤️</div>
+</div>
+
+<script>
+function confirmDate(){
+document.getElementById("message").innerHTML="✓ ההגעה אושרה בהצלחה. נתראה ב־26.08.2026 ❤️";
+}
+</script>
+</body>
+</html>
